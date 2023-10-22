@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='choose_menu_style.css') }}">
+    <title>Choose Your Menu</title>
+</head>
+<body>
+    <h1 style="text-align: center;margin-top: 100px;">Choose Your Menu Design</h1>
+    <div class="menu">
+        <div class="card">
+            <a href="{{ url_for('menu_card1') }}"><img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/ex1.PNG"></a>
+</div>
+<div class="card">
+    <a href="{{ url_for('menu_card2') }}"><img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/ex2.PNG"></a>
+</div>
+<div class="card">
+    <a href="{{ url_for('menu_card3') }}"><img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/ex3.gif"></a>
+</div>
+</div>
+</body>
+</html>

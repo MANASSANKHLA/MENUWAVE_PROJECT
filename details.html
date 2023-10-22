@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_style.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    <!-- Restaurant Name -->
+    {% if show_element1 %}
+    <div class="container">
+    <form method="POST" action="{{ url_for('restro_name') }}">
+        <label class="label2" for="therestro">Please provide a name for your restaurant: </label><br>
+        <input class="input2" type="text" name="therestro" required>
+    </div>
+    <div class="links">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="links">
+        <a href="{{ url_for('sign_in') }}">Sign In Page</a>
+    </div>
+    <p style="margin-top: 50px; text-align: center;">{{output}}</p>
+    </form>
+    {% endif %}
+    
+
+
+
+
+    <!-- Name of Category -->
+    {% if show_element3 %}
+    <div class="container">
+    <form method="POST" action="{{ url_for('cat_name') }}">
+        <label class="label2" for="name_category">Please enter the name of the category: </label><br>
+        <input class="input2" type="text" name="name_category" required>
+    </div>
+    <div class="links">
+        <button type="submit">Submit</button>
+    </div>
+    <div class="links">
+        <a href="{{ url_for('sign_in') }}">Sign In Page</a>
+    </div>
+        <p style="margin-top: 50px; text-align: center;">{{output}}</p>
+        <p style="margin-top: 50px; text-align: center;">{{output2}}</p>
+    </form>
+    {% endif %}
+
+
+    <!-- Name of Dish, Its Price And Description -->
+    {% if show_element5 %}
+    <div class="container">
+    <form method="POST" action="{{ url_for('n_dish_prc_des') }}">
+        <label class="label2" for="dish_name">Enter the name of the dish: </label><br>
+        <input class="input2" type="text" name="dish_name" required><br>
+        <label class="label2" for="dish_prc">Enter the price of the dish:  </label><br>
+        <input class="input2" type="text" name="dish_prc" required><br>
+        <label class="label2"  for="dish_des">Enter the description of the dish: </label><br>
+        <input class="input2" type="text" name="dish_des" required>
+    </div>
+    <div class="links">
+        <button type="submit" name="action" value="action1">Submit</button>
+    </div>
+    <div class="links">
+        <button type="submit" name="action" value="action2">New Dish</button>
+    </div>
+    <div class="links">
+        <button type="submit" name="action" value="action3">New Category</button>
+    </div>
+    <div class="links">
+        <a href="{{ url_for('sign_in') }}">Sign In Page</a>
+    </div>
+        <p style="margin-top: 50px; text-align: center;">{{output}}</p>
+        <p style="margin-top: 50px; text-align: center;">{{output2}}</p>
+    </form>
+    {% endif %}
+</body>
+</html>

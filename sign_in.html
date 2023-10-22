@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sign_in_style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="static/sign_in_style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><h1>Sign In</h1></div>
+    <form method="POST" action="{{ url_for('sign_in_email_verification') }}">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" required>
+
+        <button class="button" type="submit">Sign In</button>
+        <div class="signin-link">
+            <a style="color: white;" href="{{ url_for('forget_page') }}">Forget Password?</a></div>
+        <label>{{output}}</label>
+        <div class="signin-link">
+            <label>Create a New Account</label>
+        <a style="color: white;" href="{{ url_for('sign_up') }}">Sign Up </a></div>
+    </form>
+</div>
+</body>
+</html>

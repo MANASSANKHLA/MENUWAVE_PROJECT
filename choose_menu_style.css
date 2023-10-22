@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(137deg, #9e71ff 100%, rgba(98, 30, 244, 0.00) 100%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    padding: 20px;
+  }
+
+  .card {
+    text-align: center;
+    background-color:transparent;
+    padding: 20px;
+    border-radius: 4px;
+
+  }
+
+  .card img {
+    width: 50%;
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.69);
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+    animation: ease-in-out;
+  }
+
+  .card a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+
+  .card img:hover{
+    width: 55%;
+    max-height: 650px;
+    box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.555);
+  }

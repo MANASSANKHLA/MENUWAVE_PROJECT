@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>MenuWave</title>
+  <style>
+    
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="#"><img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/lg_navbar.png" alt="Logo"></a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="{{ url_for('sign_in') }}" class="bts">Sign In</a></li>
+      <li><a href="{{ url_for('sign_up') }}" class="bts">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <section class="section" style="background: url('https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/bgs/bg_index.jpg');max-width: 100%;height: 80vh;background-size: cover;">
+    <div class="section-content">
+      <h1 style="margin-top: 200px; font-size: 40px; color: #f9f9f9;">WELCOME<br>TO<br>MENUWAVE</h1>
+      <p style="color: #f9f9f9;">Scroll Down<br><br>⇓</p>
+      <div class="down-arrow"></div>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="section-content">
+      <h2 class="section-heading">ABOUT US</h2>
+      <p>Welcome to MenuWave! <br><br>We specialize in creating QR code menu cards for restaurants. <br>Our user-friendly platform allows you to effortlessly create customized online menus and generate unique QR codes. <br>Say goodbye to printing and enjoy a seamless, interactive dining experience for your customers.
+        <br>
+        Join us today and embrace the future of restaurant menus with MenuWave!</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-content">
+      <h2 class="section-heading">HOW IT WORKS</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/working_sec/w_1.jpg" alt="Step 1 Image" style="max-width: 100%;border-radius: 10px;">
+          <div class="step-number">Step 1</div>
+          <div class="step-title">Sign in to MenuWave</div>
+          <div class="step-description">Sign in to MenuWave for secure access to personalized features and efficient management of digital menus through QR codes.</div>
+        </div>
+        <div class="step">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/working_sec/w_2.jpg" alt="Step 2 Image" style="max-width: 100%;border-radius: 10px;">
+          <div class="step-number">Step 2</div>
+          <div class="step-title">Fill Details for Menu Card</div>
+          <div class="step-description">Complete the form to provide the necessary details for your menu card creation.</div>
+        </div>
+        <div class="step">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/working_sec/w_3.jpg" alt="Step 3 Image" style="max-width: 100%;border-radius: 10px;">
+          <div class="step-number">Step 3</div>
+          <div class="step-title">Choose a Menu Card</div>
+          <div class="step-description">Select a menu card design that best suits your restaurant's style and branding.</div>
+        </div>
+        <div class="step">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/working_sec/w_4.jpg" alt="Step 4 Image" style="max-width: 100%;border-radius: 10px;">
+          <div class="step-number">Step 4</div>
+          <div class="step-title">Your QR Code is Ready</div>
+          <div class="step-description">Congratulations! Your QR code has been successfully generated. Now you can use your QR Code to show Menu Card.</div>
+        </div>
+        <!-- <div class="step">
+          <img src="step5.jpg" alt="Step 5 Image" style="max-width: 100%;">
+          <div class="step-number">Step 5</div>
+          <div class="step-title">Lorem ipsum dolor sit amet</div>
+          <div class="step-description">Consectetur adipiscing elit.</div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-content">
+      <h2 class="section-heading">OUR TEAM</h2>
+      <div class="team">
+        <div class="team-member">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/profile_pics/lp.jpg" alt="Team Member 1">
+        
+          <h3 style="color: #f9f9f9;">LABDH PUROHIT</h3>
+        </div>
+        <div class="team-member">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/profile_pics/ms.jpg" alt="Team Member 2">
+          <h3 style="color: #f9f9f9;">MANAS SANKHLA</h3>
+        </div>
+        <div class="team-member">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/profile_pics/kp.jpg" alt="Team Member 3">
+          <h3 style="color: #f9f9f9;">KESHAV PUROHIT</h3>
+        </div>
+        <div class="team-member">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/profile_pics/ks.jpeg" alt="Team Member 4">
+          <h3 style="color: #f9f9f9;">KULDEEP SWAMI</h3>
+        </div>
+        <div class="team-member">
+          <img src="https://labdhpurohit.github.io/Menu_Wave_Files/menuwave_links/profile_pics/mg.jpg" alt="Team Member 5">
+          <h3 style="color: #f9f9f9;">MANOJ GEHLOT</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-content contact">
+      <h2 class="section-heading">CONTACT US</h2>
+      <form method="POST" action="{{ url_for('contact') }}">
+        <input class="i_put" type="text" name="t_name" placeholder="Enter your Name">
+        <br>
+        <input class="i_put" type="email" name="t_email" placeholder="Enter your Email">
+        <br>
+        <textarea class="i_ta" name="t_des" placeholder="Write Description Here"></textarea>
+        <br>
+        <button class="i_button" type="submit">Submit</button>
+        <p>{{output}}</p>
+      </form>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // Add your custom JavaScript here
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='qr_code_style.css') }}">
+    <title>QR Code</title>
+</head>
+<body>
+    <h1 style="text-align: center;margin-top: 50px;">QR Code and Link</h1>
+    <div class="menu">
+        <div class="card">
+            <p style="color: rgb(214, 177, 255);">Click QR Code to Download Image</p>
+            <a href="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Flabdhpurohit.github.io/Menu_Wave_Files/{{email}}/menuwave.html&size=300"><img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Flabdhpurohit.github.io/Menu_Wave_Files/{{email}}/menuwave.html&size=300"></a>
+            <a href="https://labdhpurohit.github.io/Menu_Wave_Files/{{email}}/menuwave.html" class="a1">Menu Card Link</a>
+            <a href="{{ url_for('home2') }}" class="a1">Back</a>
+            <a href="{{ url_for('sign_in') }}" class="a1">Sign Out</a>
+        </div>
+    </div>
+</body>
+</html>

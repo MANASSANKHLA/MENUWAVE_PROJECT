@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sign_in_style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="static/sign_in_style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+</head>
+<body>
+    <div class="container">
+    <form method="POST" action="{{ url_for('forget') }}">
+        <label for="email">Email: </label>
+        <input type="email" name="email" required>
+        <button class="button" type="submit">Send Mail</button>
+        <p style="color: #f9f9f9;">{{output}}</p>
+        <div class="signin-link">
+        <a style="color: #f9f9f9;" href="{{ url_for('sign_in') }}">Sign In Page</a></div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home_style.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    {% if show_element1 %}
+    <div class="container">
+        <div>
+            <p class="label">You have no menu cards</p>
+          </div>
+        </div>
+        <div class="links">
+        <a href="{{ url_for('details') }}">Create a Menu</a></div>
+        <div class="links">
+        <a href="{{ url_for('sign_in') }}">Sign Out</a></div>
+        <p style="margin-top: 50px; text-align: center;">{{output}}</p>
+    
+    
+    {% endif %}
+    {% if show_element2 %}
+    <div class="container">
+        <div>
+            <p class="label">{{moutput}}</p>
+          </div>
+        </div>
+    <div class="links">
+        <a href="{{ url_for('delete') }}">Delete</a>
+    </div>
+    <div class="links">
+        <a href="{{ url_for('show_qr') }}">QR Code and Link</a>
+    </div>
+    <div class="links">
+        <a href="{{ url_for('sign_in') }}">Sign Out</a>
+    </div>
+    <p style="margin-top: 50px; text-align: center;">{{output}}</p>
+    {% endif %}
+</body>
+</html>

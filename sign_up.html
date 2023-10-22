@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Form</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sign_up_style.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="static/sign_up_style.css"> -->
+</head>
+<body>
+
+    {% if show_element1 %}
+    <div class="container">
+        <div class="logo">
+            <h1>SIGN UP</h1>
+          </div>
+    <form method="POST" action="{{ url_for('send_email') }}">
+        <label for="u_name">Name:</label>
+        <input type="text" name="u_name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="pass">Create Password:</label>
+        <input type="password" name="pass" required>
+
+        <button type="submit" class="button">Sign Up</button>
+        <label style="padding-top: 20px;">{{output}}</label>
+    </form>
+    <div class="signin-link">
+        <label>Already have an account?</label>
+        <a style="color: rgb(204, 204, 204);" href="{{ url_for('sign_in') }}">Sign In</a>
+      </div>
+</div>
+    {% endif %}
+    {% if show_element2 %}
+    <div class="container">
+    <form method="POST" action="{{ url_for('mail_verify') }}">
+        <div class="logo">
+            <h1>Verify your Email</h1>
+        </div>
+        <label for="ver" style="margin-bottom: 20px; margin-top: 50px;">We have sent you a verification code via email:</label>
+        <input type="text" name="ver" required>
+
+        <button type="submit" class="button">Submit</button>
+        <label style="padding-top: 20px;">{{output2}}</label>
+    </form>
+    <div class="signin-link">
+        <a style="color: rgb(204, 204, 204);" href="{{ url_for('sign_up') }}">Cancel</a>
+      </div>
+</div>
+    {% endif %}
+</body>
+</html>
